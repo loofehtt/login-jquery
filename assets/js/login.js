@@ -16,12 +16,13 @@ $(document).ready(function(){
                     password: $password
                 },
                 success : function(response){
-                    if (response == "success") {
+                    if (response == "admin") {
                         window.location.href="index.php";
+                    }else if(response=="student"){
+                        window.location.href="index-student.php";
                     }else if(response=="wrong"){
                         alert("Mật khẩu không chính xác !");
-                    }
-                    else {
+                    }else {
                         alert("Tài khoản không tồn tại")
                     }
                 }
